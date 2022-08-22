@@ -1,13 +1,13 @@
 import React, {useContext} from 'react'
-import { mainContext } from '../context/mainContext'
-import {LayoutContext} from '../context/mainContext'
+import { MainContextNew } from '../context/mainContextNew'
+
 const CardImage = () => {
-const context = useContext(mainContext);
+const context = useContext(MainContextNew);
 console.log(context)
   return (
     <div>
 
-        {/* <img src={context.data.avatar}/> */}
+        <img src={context.data.avatar}/>
     </div>
   )
 }

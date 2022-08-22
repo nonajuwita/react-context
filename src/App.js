@@ -3,7 +3,7 @@ import './App.css';
 import Card from './component/Card';
 import LayoutContextProvider from './context/LayoutContext';
 import LayoutContextNewProvider from './context/LayoutContextNew';
-import mainContextProvider from './context/mainContext';
+import MainContextNewProvider from './context/mainContextNew';
 
 function App() {
 
@@ -11,9 +11,9 @@ function App() {
   return (
     <div className="App">
       <LayoutContextNewProvider>
-    <mainContextProvider>
+    <MainContextNewProvider>
       <Card/>
-    </mainContextProvider>
+    </MainContextNewProvider>
     </LayoutContextNewProvider>
     </div>
   );

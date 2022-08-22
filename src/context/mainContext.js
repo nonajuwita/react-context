@@ -8,9 +8,9 @@ import React, {Component, createContext} from "react";
 
 
 
-export const mainContext = createContext();
+export const MainContext = createContext();
 
-class mainContextProvider extends Component{
+class MainContextProvider extends Component{
 
     state = {
        
@@ -20,15 +20,19 @@ class mainContextProvider extends Component{
 
    
     render() {
+
+        const mainContextValue={
+            data: this.state
+        }
         return(
-            <mainContext.Provider
-            value={{...this.state}}
+            <MainContext.Provider
+            value={mainContextValue}
             >
               {this.props.children}  
-            </mainContext.Provider>
+            </MainContext.Provider>
         )
     }
 
 }
 
-export default mainContextProvider;
+export default MainContextProvider;
